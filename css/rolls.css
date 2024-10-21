@@ -1,0 +1,144 @@
+
+
+body{
+    width:100% ;
+    min-height: 100vh;
+    background: #f8f8f8;
+    margin: 0px;
+
+}
+*{
+    font-family: sans-serif;
+}
+
+header{
+    height: 60px;
+    width: 100%;
+    background:#040404;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid white;
+}
+.container{
+   width: 98%;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-between; 
+   
+}
+nav ul li{
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+    font-weight: 500;
+}
+
+
+
+.navbar ul{
+    list-style-type:none ;
+    /* background-color: hsl(0, 0%, 25%); */
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+  
+}
+.navbar a{
+color: white;
+text-decoration: none;
+padding: 15px;
+display: block;
+text-align: center;
+font-size: 13px;
+}
+.navbar a:hover{
+    background-color: hsl(0, 0%, 100%);
+    color: black;
+
+}
+
+.navbar{
+    background-color: hsl(0, 0, 25);
+    
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+}
+.navbar li{
+    float:left ;
+} 
+.logo{
+    font-size: 24px;
+}
+h1{
+    font-size: 24px;
+}
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 15px;
+
+}
+h2{
+    color:  rgb(38, 158, 38);
+    margin-left: 10px;
+   
+
+}
+h4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 10px;
+
+}
+.container img{
+    height: 30px;
+    width: 211px;
+    margin-left: 16px;
+    margin-top: 10px;
+}
+
+body{
+    background-color:rgb(38, 158, 38);
+}
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.boxpic{
+    width: 100vh;
+    object-fit: contain;
+    border: 2px solid black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.image{
+    display: flex;
+    justify-content: center;
+   
+    background-color: white;
+    
+}
+.recipe-box{
+    background-color: white;
+   
+    
+}
+.recipe-box h2{
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+.recipe-box iframe{
+    margin-bottom: 50px;
+}
+footer {
+    background: #000000;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
