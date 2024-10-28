@@ -14,7 +14,7 @@ body{
 header{
     height: 60px;
     width: 100%;
-    background:#040404;
+    background:#222121;     
     color: #fff;
     display: flex;
     align-items: center;
@@ -54,14 +54,14 @@ text-align: center;
 font-size: 13px;
 }
 .navbar a:hover{
-    background-color: hsl(0, 0%, 100%);
-    color: black;
-
+    background-color: hsl(0, 0%, 18%);
+    color:rgb(38, 158, 38);
+    font-weight: bolder;
 }
-
 .navbar{
     background-color: hsl(0, 0, 25);
-    
+    display: flex;
+    margin-right: 20px;
     font-style: italic;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
@@ -92,12 +92,18 @@ h4{
     margin-left: 10px;
 
 }
-.container img{
+.logo{
     height: 30px;
     width: 211px;
     margin-left: 16px;
     margin-top: 10px;
 }
+.search-logo{
+    width: 30px;
+    height: 22px;
+    position:relative;
+    top: 13px;
+  }
 
 body{
     background-color:rgb(38, 158, 38);
@@ -111,7 +117,7 @@ h1{
     margin-bottom: 50px;
 }
 .boxpic{
-    width: 100vh;
+    width: 60%;
     object-fit: contain;
     border: 2px solid black;
     margin-top: 20px;
@@ -142,3 +148,77 @@ footer {
     color: #fff;
     text-align: center;
 }
+ul li ul.dropdown li{
+    display: block;
+  }
+  ul li ul.dropdown li a{
+    text-align: center;
+  }
+  ul li ul.dropdown {
+    width: 90px;
+    background:#222121;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    box-shadow: 2px 2px 5px rgb(255, 255, 255,0.8);
+  }
+  ul li:hover ul.dropdown{
+    display: block;
+  }
+  .burger {
+   display: none;
+   color: white;
+   font-size: 1.2rem;
+   cursor: pointer;
+ }
+ @media screen and (max-width: 590px) {
+   
+ .navbar ul{
+     display: none;
+   }
+   .search-logo{
+     display: none;
+   }
+
+   .burger {
+     display: block;
+     opacity: 1;
+   }
+
+   .menu-panel.active {
+     right: 0;
+   }
+ }
+ .menu-panel {
+   background-color: #222121;
+   color: white;
+   height: 350px;
+   width: 150px;
+   position: fixed;
+   right: -100%;
+   top: 0;
+   transition: right 0.4s ease;
+   z-index: 1;
+ }
+ .menu-panel ul {
+   list-style: none;
+   padding: 50px 20px;
+ }
+ .menu-panel ul li {
+   margin-bottom: 20px;
+ }
+ .menu-panel ul li a {
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   font-size: 0.7rem;
+ }
+ .close-btn {
+   background-color: transparent;
+   color: white;
+   border: none;
+   font-size: 2rem;
+   cursor: pointer;
+   position: absolute;
+   top: 10px;
+   right: 20px;
+ }

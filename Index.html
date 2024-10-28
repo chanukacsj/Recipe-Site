@@ -5,31 +5,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/css.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
+      
+        .burger {
+        display: none;
+        color: white;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+      @media screen and (max-width: 590px) {
         
+      .navbar ul{
+          display: none;
+        }
+        .search-logo{
+          display: none;
+        }
+
+        .burger {
+          display: block;
+          opacity: 1;
+        }
+
+        .menu-panel.active {
+          right: 0;
+        }
+      }
+      .menu-panel {
+        background-color: #222121;
+        color: white;
+        height: 350px;
+        width: 150px;
+        position: fixed;
+        right: -100%;
+        top: 0;
+        transition: right 0.4s ease;
+        z-index: 1;
+      }
+      .menu-panel ul {
+        list-style: none;
+        padding: 50px 20px;
+      }
+      .menu-panel ul li {
+        margin-bottom: 20px;
+      }
+      .menu-panel ul li a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 0.7rem;
+      }
+      .close-btn {
+        background-color: transparent;
+        color: white;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+      }
+
     </style>
 </head>
 <body>
    
     <header>
-        <div class="container">
-            
+        <div class="container"> 
                 <img class="logo" src="/images/logo-no-background.png" alt="">
-            
             <nav class="navbar">
                 <ul>
                     <li><a href="Index.html">Home</a></li>    
-                    <li><a href="pages/egg_hoppers.html">Egg Hoppers</a></li>
-                    <li><a href="pages/lentil_curry.html">Dhal Curry</a></li>
-                    <li><a href="pages/baked_chicken.html">Baked chicken</a></li>
-                    <li><a href="pages/watalappan.html">Watalappan</a></li>
-                    <li><a href="pages/rolls.html">Rolls</a></li>
+                    <li><a href="#">Recipes ▼ </a>
+                        <ul class="dropdown">
+                            <li><a href="pages/egg_hoppers.html">Egg Hoppers</a></li>
+                            <li><a href="pages/lentil_curry.html">Dhal Curry</a></li>
+                            <li><a href="pages/baked_chicken.html">Baked chicken</a></li>
+                            <li><a href="pages/watalappan.html">Watalappan</a></li>
+                            <li><a href="pages/rolls.html">Rolls</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#aboutSection">About</a></li>
                 </ul>
+                <img class="search-logo" src="/images/icons/icons8-search-50.png" alt=""> 
+                <i class="fa fa-bars burger" id="burger" aria-hidden="true"></i>
             </nav>
         </div>
     </header>
- <main>
+    <!-- ========================== side navbar ========================== -->
+    <div class="menu-panel" id="menu-panel-id">
+      <button class="close-btn" id="btn-close">&times;</button>
+      <ul>
+        <li><a href="Index.html">Home</a></li>    
+        <li><a href="#">Recipes ▼ </a>
+            <ul class="dropdown">
+                <li><a href="pages/egg_hoppers.html">Egg Hoppers</a></li>
+                <li><a href="pages/lentil_curry.html">Dhal Curry</a></li>
+                <li><a href="pages/baked_chicken.html">Baked chicken</a></li>
+                <li><a href="pages/watalappan.html">Watalappan</a></li>
+                <li><a href="pages/rolls.html">Rolls</a></li>
+            </ul>
+        </li>
+        <li><a href="#aboutSection">About</a></li>
+    </ul>
+    </div>
 
+ <main>
         <!-- ================= Hero Section ================== -->
 
 
@@ -69,11 +156,13 @@
           </div>
         
     </section>
+    <section>
 
+      
     <!-- ================= Recipe Section ================== -->
 
     
-    <section class="recipes">
+    <section class="recipes" id="recipes">
         <h1>Featured Recipe</h1>
         <div class="recipe-section">
             <div class="recipe-card">
@@ -117,6 +206,28 @@
             </div>
         </div>
     </section>
+
+    <section id="aboutSection">
+    <!-- ==================== About Section ================== -->
+    <div class="about">
+      <h1>About <span style="color: white;">Recipe</span></h1>
+      <!-- <div class="about-list"> -->
+
+       <p> Baked Chicken: This is typically marinated chicken that's oven-baked with a blend of spices like curry powder, chili, garlic, and sometimes coconut milk for extra richness. It's a popular dish in Sri Lanka for special occasions and daily meals, often served with rice or bread. <br> <br>
+
+        Egg Hoppers: A variation of the traditional Sri Lankan "appa" (hopper), egg hoppers are bowl-shaped pancakes made from a fermented rice flour and coconut milk batter, with an egg cracked into the middle while it cooks. The edges are crispy, and the center is soft and custardy. It's often eaten for breakfast or dinner with sambols or curry. <br> <br>
+
+        Dhal Curry: A staple in Sri Lankan cuisine, this is a lentil-based curry made with red lentils (masoor dhal), cooked in coconut milk and flavored with spices like turmeric, mustard seeds, curry leaves, and garlic. It's commonly served with rice or roti. <br> <br>
+
+        Rolls: A popular snack in Sri Lanka, rolls are deep-fried, crispy pastries filled with a spicy filling, usually made with vegetables, fish, or meat. The filling is wrapped in a thin dough, coated in breadcrumbs, and fried until golden. <br> <br>
+
+        Watalappan: A traditional Sri Lankan dessert made with coconut milk, jaggery (a type of unrefined sugar), eggs, cardamom, and nutmeg. It's a rich, spiced pudding that’s often served during celebrations and special occasions, especially by the Sri Lankan Muslim community. <br><br>
+        These dishes reflect the rich culinary heritage of Sri Lanka, combining local spices and ingredients into flavorful, comforting meals.
+        </p>
+      <!-- </div> -->
+   </div>
+  </section>
+
     <footer>
         <div>
             <p>&copy;Sri lankan Recipes</p>
@@ -124,5 +235,18 @@
     </footer>
         
    </main>
+   <script>
+    const burger = document.getElementById("burger");
+    const menuPanel = document.getElementById("menu-panel-id");
+    const closeBtn = document.getElementById("btn-close");
+
+    burger.addEventListener("click", () => {
+      menuPanel.classList.toggle("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      menuPanel.classList.remove("active");
+    });
+  </script>
 </body>
 </html>
